@@ -20,12 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;700;800;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Yellowtail&display=swap"
       rel="stylesheet"
     />
-    <title>Home</title>
+    <title>Topsail Beach</title>
   </head>
-  <body class="container-fluid px-0">
+  <body class="container-fluid px-0 home">
     <!-- Header > Nav -->
     <header id="header">
-      <nav class="p-3 navbar navbar-expand-md navbar-light">
+      <nav class="p-3 navbar navbar-expand-md bd-dark">
         <div class="container-fluid">
           <button
             class="navbar-toggler px-0 align-middle border-0 shadow-none"
@@ -49,10 +49,10 @@
             /></a
               >
               <div class="navbar-nav align-items-md-center  fs-5">
-                <!-- TODO: remove home link on index.html -->
-                <a class="nav-item nav-link active" aria-current="page" href="#"
+                <!-- TODO: remove home link on index.html? -->
+                <!-- <a class="nav-item nav-link active" aria-current="page" href="#"
                   >Home</a
-                >
+                > -->
                 <a class="nav-item nav-link" href="activities.html"
                   >Activities</a
                 >
@@ -70,21 +70,23 @@
     <div class="container-fluid px-0">
       <!-- Main -->
       <main>
-        <div class="hero text-center text-light">
-          <div class="hero-text">
-            <h1>Topsail Beach</h1>
-            <h2>North Carolina</h2>
-            <div>
-              <q>Best Little Beach Town in the USA</q>
-              <div class="stars">
-                <img src="./media/star.svg" alt="4.5 out of 5 stars" />
-                <img src="./media/star.svg" alt="" />
-                <img src="./media/star.svg" alt="" />
-                <img src="./media/star.svg" alt="" />
-                <img src="./media/star-half.svg" alt="" class="half" />
-              </div>
+        <div class="hero text-center text-light d-flex flex-column justify-content-center align-items-center">
+          <div class="hero-text d-flex flex-column">
+            <div class="hero-slanted-text text-end">
+              <h1 class="mb-0 fw-bold">Topsail Beach</h1>
+              <h2 class="mt-0 text-end">North Carolina</h2>
             </div>
-            <p>- Trip Advisor</p>
+            <div class="hero-review-copy">
+              <q>Best Little Beach Town in the USA</q>
+              <!-- <div class="trip-advisor d-flex justify-content-center align-items-center"> -->
+                <p class="mb-0"><img src="./media/star.svg" alt="4.5 out of 5 stars" />
+                  <img src="./media/star.svg" alt="" />
+                  <img src="./media/star.svg" alt="" />
+                  <img src="./media/star.svg" alt="" />
+                  <img src="./media/star-half.svg" alt="" class="half" />&nbsp; - Trip Advisor</p>
+              <!-- </div> -->
+            </div>
+
             </div>
           </div>
         </div>

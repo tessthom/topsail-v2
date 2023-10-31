@@ -1,25 +1,20 @@
-// export function initOverlay() {
-//   const overlay = document.createElement("div");
-//   overlay.classList.add("overlay");
-//   document.body.appendChild(overlay);
-
-//   const navbarToggler = document.querySelector(".navbar-toggler");
-
-//   navbarToggler.addEventListener("click", function () {
-//     const isExpanded = this.getAttribute("aria-expanded") === "true";
-//     toggleOverlay(isExpanded);
-//   });
-
-//   overlay.addEventListener("click", function () {
-//     const isExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
-//     toggleOverlay(isExpanded);
-//   })
-
-//   function toggleOverlay(isExpanded) {
-//     if (isExpanded) {
-//       overlay.classList.add("active");
-//     } else {
-//       overlay.classList.remove("active");
-//     }
-//   }
-// }
+// this function overlays the page with a div when the navbar is expanded
+export function initOverlay() {
+  const toggle = document.querySelector(".navbar-toggler"); // this line creates a reference variable to the navbar-toggler class by using the querySelector method
+  // TODO: COMMENT EACH LINE HERE TO TRACK WHAT IS HAPPENING RE: CLASSES AND POSSIBLE EFFECTS
+  toggle.addEventListener("click", function () { // this line adds an event listener to the toggle variable. the two parameters are the event type and the function to be executed when the event is triggered. in this case, the event type is a click and the function is an anonymous function because we don't need to call it anywhere else
+    const isExpanded = this.getAttribute("aria-expanded") === "true"; // this line creates a reference variable to the aria-expanded attribute of the toggle variable, which is true when the navbar is expanded and false when it is not. so, the value of the isExpanded variable is true when the aria-expanded attribute is true and false when it is false. this always refers to the object that the event is happening on, so in this case, it refers to the toggle variable. the === operator checks if the two values are equal and returns true if they are and false if they are not. so isExpanded will hold the value of true if the aria-expanded attribute is true and false if it is false
+    if (isExpanded) { // this is a conditional statement that checks if the value of the isExpanded variable is true. if it is...
+      const overlay = document.createElement("div"); // a reference variable for the overlay div is created and the createElement method is used to create a div element. by calling it on the document object, we are creating a div element in the document. the div element is stored in the overlay variable
+      overlay.classList.add("overlay"); // the classList property is used to add the overlay class to the overlay div. we'll use this class to style the overlay div in our css file
+      document.body.appendChild(overlay); // the appendChild method is used to append the overlay div to the body of the document. we have to do this in order for the overlay div to show up on the page. when the overlay was created on the document object before, it wasn't visible on the page because document is just a representation of the html document. we have to append the overlay div to the body of the document in order for it to show up on the page
+      overlay.addEventListener("click", function () { // we add an event listener to the overlay, which is now appended to the body element of the document. the event type is a click and the function is an anonymous function
+        toggle.click(); // the click  method is a built-in method that simulates a click on the toggle variable. this is used to close the navbar when the overlay is clicked. we can call the click method on any element that has a click event listener already set on it. we do this inside of the overlay event listener because we want the navbar to close when the overlay is clicked
+        overlay.remove(); // the remove method is a built-in method that removes the overlay div from the body of the document. we do this inside of the overlay event listener because we want the overlay to be removed when the overlay is clicked. i don't understand why toggle.click and overlay.remove are inside of the overlay event listener and not the toggle event listener. i think it's because the overlay event listener is triggered when the overlay is clicked, so we want to close the navbar and remove the overlay when the overlay is clicked
+      });
+    } else { // if the value of the isExpanded variable is false, then...
+      const overlay = document.querySelector(".overlay"); // need to specify the same reference variable again because the first one is out of scope due to being inside the if statement. this line creates a reference variable that's local to the else statement, so we can use it when the navbar is closed
+      overlay.remove(); // the remove method is a built-in method that removes the overlay div from the body of the document. we do this inside of the else statement because we want the overlay to be removed when the navbar is closed
+    }
+  });
+}
