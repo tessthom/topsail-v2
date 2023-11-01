@@ -43,16 +43,16 @@
             <div class="navbar-header d-flex justify-content-between w-100">
               <a href="index.html" class="navbar-brand d-none d-md-inline-block"
                 ><img
-                src="./media/ts-logo-black.svg"
+                src="./media/ts-logo-white.svg"
                 alt="topsail beach logo"
                 class="w-100"
             /></a
               >
               <div class="navbar-nav align-items-md-center  fs-5">
                 <!-- TODO: Comment out current page's nav-item? -->
-                <a class="nav-item nav-link"href="index.html">Home</a> <!-- removed  aria-current="page" from current page attributes -->
+                <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="activities.html">Activities</a>
-                <!-- <a class="nav-item nav-link" href="history.html">History</a> -->
+                <a class="nav-item nav-link active" aria-current="page" href="#">History</a>
                 <a class="nav-item nav-link" href="faq.html">FAQ</a>
                 <a class="nav-item nav-link pe-md-0" href="faq.html#directions">Directions</a>
               </div>
@@ -64,28 +64,16 @@
     <div class="container-fluid px-0">
       <!-- Main -->
       <main>
-        <div class="hero text-center text-light d-flex flex-column justify-content-center align-items-center">
-          <div class="hero-text d-flex flex-column">
-            <div class="hero-slanted-text text-end">
-              <h1 class="mb-0 fw-bold">Topsail Beach</h1>
-              <h2 class="mt-0 text-end">North Carolina</h2>
-            </div>
-            <div class="hero-review-copy">
-              <q>Best Little Beach Town in the USA</q>
-              <!-- <div class="trip-advisor d-flex justify-content-center align-items-center"> -->
-                <p class="mb-0"><img src="./media/star.svg" alt="4.5 out of 5 stars" />
-                  <img src="./media/star.svg" alt="" />
-                  <img src="./media/star.svg" alt="" />
-                  <img src="./media/star.svg" alt="" />
-                  <img src="./media/star-half.svg" alt="" class="half" />&nbsp; - Trip Advisor</p>
-              <!-- </div> -->
-            </div>
 
-            </div>
-          </div>
-        </div>
       </main>
       <!-- for text that is centered @ one size and start/end aligned at another, add sm/md/lg/xl sizes between text-size-start|center|end. "text-center text-md-start" will center align text at small sizes and move to the left at medium and up sizes -->
+
+      <!-- Scroll back to top button -->
+      <button onClick="topFunction()" class="scroll-btn border-0" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+        </svg>
+      </button>
 
       <!-- Footer -->
       <footer class="bg-warning row px-3 py-5 justify-content-between gy-2">
