@@ -79,8 +79,13 @@ a,
 a.btn,
 .nav-link,
 .nav-link:hover,
+.navbar-toggler,
 #toggle-icon {
   color: var(--black);
+}
+
+.navbar-toggler {
+  text-decoration: none;
 }
 
 .home header a,
@@ -181,7 +186,7 @@ a:hover {
 
 .nav-link.active {
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.25em;
 }
 
 /* Home */
@@ -339,9 +344,9 @@ a:hover {
   color: var(--black);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .hero h1 {
-    font-size: 5rem;
+    font-size: 5em;
   }
 }
 
