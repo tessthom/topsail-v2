@@ -70,11 +70,11 @@ header::before {
   z-index: -1;
 }
 
-a, .nav-link, .nav-link:hover, #toggle-icon {
+a, a.btn, .nav-link, .nav-link:hover, #toggle-icon {
   color: var(--black);
 }
 
-.home a, .home .nav-link, .home header button, .home .nav-link:hover, .home #toggle-icon {
+.home header a, .home .nav-link, .home .nav-link:hover, .home .navbar-toggler, .home #toggle-icon {
   color: var(--white);
 }
 
