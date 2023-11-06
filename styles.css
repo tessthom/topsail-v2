@@ -202,7 +202,7 @@ a:hover {
 
 .hero h1 {
   font-family: 'Yellowtail', cursive;
-  font-size: 6em;
+  font-size: 6rem;
   margin: 0;
   line-height: 90%;
 }
@@ -339,6 +339,12 @@ a:hover {
   color: var(--black);
 }
 
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .act-grid-container {
     display: grid;
@@ -361,6 +367,10 @@ a:hover {
 
   .rescue {
     padding-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 8rem;
   }
 }
 
