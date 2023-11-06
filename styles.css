@@ -1,16 +1,16 @@
 /* Custom Colors */
 :root {
-  --white: #F7F4F1;
-  --cream: #EBE6DC;
+  --white: #f7f4f1;
+  --cream: #ebe6dc;
   --black: #333333;
-  --blue: #23659F;
-  --teal: #39AAA7;
-  --light-teal: #AACAC0;
-  --green: #6CA092;
-  --yellow: #F1D27A;
-  --orange: #FC8A68;
-  --coral: #F97B61;
-  --red: #FD5755;
+  --blue: #23659f;
+  --teal: #39aaa7;
+  --light-teal: #aacac0;
+  --green: #6ca092;
+  --yellow: #f1d27a;
+  --orange: #fc8a68;
+  --coral: #f97b61;
+  --red: #fd5755;
 }
 
 /* Global */
@@ -29,11 +29,11 @@ body {
 h1 {
   position: relative;
   /* z-index: 999; */
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
 h2 {
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
 .text-indent {
@@ -42,10 +42,10 @@ h2 {
 
 /* Nav */
 #toggle-icon::before {
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-.navbar-toggler[aria-expanded="true"] #toggle-icon::before {
+.navbar-toggler[aria-expanded='true'] #toggle-icon::before {
   transform: rotate(45deg);
 }
 
@@ -64,17 +64,30 @@ header::before {
   left: 0;
   width: 100%;
   height: 15vh;
-  background: linear-gradient(180deg,#39aaa7,rgba(57,170,167,.5) 37.5%,rgba(57,170,167,0));
+  background: linear-gradient(
+    180deg,
+    #39aaa7,
+    rgba(57, 170, 167, 0.5) 37.5%,
+    rgba(57, 170, 167, 0)
+  );
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
 }
 
-a, a.btn, .nav-link, .nav-link:hover, #toggle-icon {
+a,
+a.btn,
+.nav-link,
+.nav-link:hover,
+#toggle-icon {
   color: var(--black);
 }
 
-.home header a, .home .nav-link, .home .nav-link:hover, .home .navbar-toggler, .home #toggle-icon {
+.home header a,
+.home .nav-link,
+.home .nav-link:hover,
+.home .navbar-toggler,
+.home #toggle-icon {
   color: var(--white);
 }
 
@@ -116,7 +129,7 @@ div.overlay {
   background-color: var(--yellow);
   color: var(--black);
   border: none;
-  padding: .25rem 4rem;
+  padding: 0.25rem 4rem;
   font-family: 'Arsenal', sans-serif;
   font-size: 1.25rem;
   font-style: italic;
@@ -134,7 +147,7 @@ div.overlay {
   transform: translate(2px, 2px);
   color: var(--black);
   background-color: var(--yellow);
-  border-color: none;
+  border: none;
 }
 
 .btn-primary:focus {
@@ -211,7 +224,7 @@ a:hover {
 
 .hero-review-copy img {
   height: 1.5rem;
-  margin-right: -.4rem;
+  margin-right: -0.4rem;
   vertical-align: text-bottom;
 }
 
@@ -230,7 +243,7 @@ a:hover {
 }
 
 .carousel-container::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -290,7 +303,7 @@ a:hover {
 
 .triptic p {
   font-size: 1rem;
-  line-height: .9em;
+  line-height: 0.9em;
 }
 
 /* Activities */
@@ -369,21 +382,22 @@ a:hover {
 
 .card img {
   filter: grayscale(100%);
-  opacity: .8;
+  opacity: 0.8;
   padding: 0;
   margin: 0;
 }
 
 .card-copy-wrapper p.mb-auto {
-  margin-top: -.15em;
+  margin-top: -0.15em;
 }
 
 .fig {
-  line-height: .7em;
+  line-height: 0.7em;
 }
 
 /* FAQ */
-.faq-list, .faq main div {
+.faq-list,
+.faq main div {
   max-width: 1000px;
 }
 
